@@ -34,7 +34,7 @@ public class ApiController {
 	
 	@PostMapping("/save/")
 	@ResponseStatus(value = HttpStatus.OK)
-    public @ResponseBody void saveUser(@RequestBody User user) {
+    public void saveUser(@RequestBody User user) {
         userService.saveUser(user);
     }
 	

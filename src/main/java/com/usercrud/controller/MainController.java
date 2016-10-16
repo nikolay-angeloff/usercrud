@@ -9,9 +9,15 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/")
 public class MainController {
  
-	@RequestMapping( value = "/", method = RequestMethod.GET )
-    public ModelAndView login() {
+	@RequestMapping( value = {"/", "/knockout"}, method = RequestMethod.GET )
+    public ModelAndView knockout() {
         ModelAndView mav = new ModelAndView("/view/index.html");
+        return mav;
+    }
+	
+	@RequestMapping( value = "/angular", method = RequestMethod.GET )
+    public ModelAndView angular() {
+        ModelAndView mav = new ModelAndView("/view/angular.html");
         return mav;
     }
 }

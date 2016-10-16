@@ -9,6 +9,8 @@ import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
  
 @Entity
 @Table(name="users")
@@ -26,6 +28,7 @@ public class User extends BaseEntity {
     
     @NotNull
     @Size(min=3, max=50)
+    @Email
     @Column(name = "email", nullable = false, unique = true)
     private String email;
     

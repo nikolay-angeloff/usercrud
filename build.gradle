@@ -1,6 +1,5 @@
 apply plugin: 'base'
 apply plugin:'war'
-apply plugin: 'jetty'
 apply plugin: 'java'
 apply plugin: 'eclipse-wtp'
 apply plugin:'idea'
@@ -51,6 +50,7 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.+'
     compile 'com.fasterxml.jackson.core:jackson-core:2.2.+'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.+'
+    
 }  
 
 eclipse {
