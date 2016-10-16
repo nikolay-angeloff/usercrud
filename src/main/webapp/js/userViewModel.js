@@ -45,7 +45,7 @@ $( document ).ready( function() {
 	ko.bindingHandlers.datepicker = {
         init: function (element, valueAccessor, allBindingsAccessor) {
             //initialize datepicker with some optional options
-            var options = allBindingsAccessor().datepickerOptions || {changeYear: true, dateFormat: 'yy-mm-dd'};
+            var options = allBindingsAccessor().datepickerOptions || {changeMonth: true, changeYear: true, dateFormat: 'yy-mm-dd', yearRange: "-100:+0",};
             $(element).datepicker(options);
 
             //handle the field changing

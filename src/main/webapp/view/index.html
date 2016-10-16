@@ -45,13 +45,13 @@
 		data-bind="click: showModal">Create User</button>	
 		
 		<table class="table table-hover table-responsive"
-			data-bind="visible: users().length > 0">
+			data-bind="visible: users().length > 0" style="display:none;">
 			<thead class="thead-inverse">
 				<tr>
-					<th data-bind="sort: { arr: users, prop: 'firstName' }">First name</th>
-					<th data-bind="sort: { arr: users, prop: 'lastName' }">Last name</th>
-					<th data-bind="sort: { arr: users, prop: 'email' }">Email</th>
-					<th data-bind="sort: { arr: users, prop: 'birthDate' }">Birth Date</th>
+					<th data-bind="sort: { arr: users, prop: 'firstName()' }">First name</th>
+					<th data-bind="sort: { arr: users, prop: 'lastName()' }">Last name</th>
+					<th data-bind="sort: { arr: users, prop: 'email()' }">Email</th>
+					<th data-bind="sort: { arr: users, prop: 'birthDate()' }">Birth Date</th>
 					<th>Actions</th>
 				</tr>
 			</thead>
